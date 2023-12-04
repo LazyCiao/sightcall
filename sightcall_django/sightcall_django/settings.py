@@ -47,6 +47,7 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
+ROOT_URLCONF = 'sightcall_django.urls'
 
 TEMPLATES = [
     {
