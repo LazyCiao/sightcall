@@ -38,7 +38,7 @@ const WeatherDisplay = ({ city }) => {
     } else if (lowerCaseDescription.includes('snow')) {
       return 'snow1.jpg';
     } else {
-      return '12.jpg';
+      return '14.jpg';
     }
   };
 

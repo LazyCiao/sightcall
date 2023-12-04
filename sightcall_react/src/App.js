@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CitySearch from './components/CitySearch';
+import WeatherDisplay from './components/WeatherDisplay';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [searchedCity, setSearchedCity] = useState('');
+
+  const handleSearch = (city) => {
+    setSearchedCity(city);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <CitySearch onSearch={handleSearch} />
+      {searchedCity && <WeatherDisplay city={searchedCity} />}
     </div>
   );
-}
+};
 
 export default App;
