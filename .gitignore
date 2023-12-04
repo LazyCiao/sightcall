@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+*.env
+
+# Virtual environment
+venv/
+env/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Database
+*.sqlite3
+
+# Static files (usually collected by Django's collectstatic)
+/static/
+
+# Media files
+/media/
+
+# Ignore the local settings file
+local_settings.py
+
+# Ignore the log files
+*.log
+
+# Ignore the secret key file
+secret_key
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore user-specific files
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.sublime-workspace
+*.sublime-project
