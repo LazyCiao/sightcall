@@ -8,7 +8,6 @@ A simple weather application built with React (frontend) and Django with Django 
 - [API Endpoints](#api-endpoints)
 - [Testing](#testing)
 - [Folder Structure](#folder-structure)
-- [License](#license)
 
 ## Installation
 
