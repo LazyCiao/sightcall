@@ -1,7 +1,7 @@
 import requests
 from rest_framework import generics
+from django.conf import settings
 from .serializers import WeatherDataSerializer
-from .secrets import OPENWEATHERMAP_API_KEY
 
 class WeatherDataListCreateView(generics.ListCreateAPIView):
     serializer_class = WeatherDataSerializer
@@ -18,8 +18,11 @@ class WeatherDataListCreateView(generics.ListCreateAPIView):
             return []
 
     def get_weather_data_by_city(self, city):
+        # Retrieve the API key from settings
+        api_key = settings.OPENWEATHERMAP_API_KEY
+
         # Create URL for weather data by city
-        url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={OPENWEATHERMAP_API_KEY}'
+        url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
         return self.make_api_call(url, city)
 
     def make_api_call(self, url, identifier):
