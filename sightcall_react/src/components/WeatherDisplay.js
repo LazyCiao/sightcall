@@ -58,7 +58,7 @@ const WeatherDisplay = ({ city }) => {
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/weather/${city}`);
+        const response = await fetch(`https://sightcall-django-e79763a0e8db.herokuapp.com/api/weather/${city}`);
         const data = await response.json();
 
         if (!response.ok) {

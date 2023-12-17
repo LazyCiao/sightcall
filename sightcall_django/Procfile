@@ -1,0 +1,1 @@
+web: gunicorn sightcall_django.wsgi

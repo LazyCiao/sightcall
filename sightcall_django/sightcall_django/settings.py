@@ -1,6 +1,5 @@
 from pathlib import Path
 import os
-import django_heroku
 import dotenv
 import dj_database_url
 
@@ -52,8 +51,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-
+    "https://sightcall-react-b679f7c982e7.herokuapp.com",
 ]
 
 ROOT_URLCONF = 'sightcall_django.urls'
@@ -126,3 +124,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import django_heroku
+django_heroku.settings(locals())
